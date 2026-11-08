@@ -1,0 +1,4 @@
+@php($f = $block['fields'])
+<a class="button {{ $f['style'] ?? '' }}" href="{{ $f['link']['href'] ?? '#' }}" data-cms-id="{{ $block['id'] }}">
+    {{ $f['label'] ?? '' }}
+</a>

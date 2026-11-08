@@ -1,0 +1,5 @@
+@if (config('app.debug'))
+    <section data-cms-id="{{ $block['id'] }}">
+        <p>No template for the {{ $block['type'] }} component yet.</p>
+    </section>
+@endif
