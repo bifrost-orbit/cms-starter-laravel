@@ -1,0 +1,28 @@
+{
+  "name": "CMS Orbit starter for Laravel",
+  "image": "mcr.microsoft.com/devcontainers/php:8.4",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24"
+    }
+  },
+  "postCreateCommand": "cp -n .env.example .env; composer install && npm install && php artisan key:generate",
+  "forwardPorts": [
+    8000,
+    5173
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "Website",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "secrets": {
+    "CMS_API_URL": {
+      "description": "The API address from CMS Orbit, under Configuration › Environments"
+    },
+    "CMS_PUBLIC_KEY": {
+      "description": "A public key from CMS Orbit, under Configuration › API keys"
+    }
+  }
+}
